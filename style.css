@@ -101,9 +101,9 @@ body{
 }
 .hero-content{
     max-width: 500px;
-   margin-left: 200px;
-   flex-direction: column; /*sắp xếp nội dung theo chiều dọc*/  
-   align-items: flex-start; /*căn trái nội dung*/
+margin-left: 200px;
+flex-direction: column; /*sắp xếp nội dung theo chiều dọc*/  
+align-items: flex-start; /*căn trái nội dung*/
 }
 .hero-content h1{
     font-size: 36px;
@@ -172,3 +172,129 @@ body{
     font-size: 15px;
     color: #666;
 }
+.media-block{
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.courses h2 {
+    color: #171100;
+    font-weight: 700;
+    font-size: 28px
+}
+.courses p{
+    margin-top: 16px;
+    color: #5f5b53;
+    font-size: 18px;
+    width: 458px;
+}
+.courses-list{
+    display: flex;
+    max-width: 100%;
+    gap: 20px;
+}
+.courses-card {
+    width: calc(33.333% - 20px);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+   
+    
+}
+.courses-card  img{
+    width: 100%;
+    border-radius: 10px;
+    height: 278px;
+}
+.courses-card h3 {
+    color: #171100;
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+    margin-left: 20px;
+}
+.courses a {
+    text-decoration: none;
+}
+.courses-card p {
+    color: #5f5b53;
+    font-size: 1.86;
+    margin-top:6px ;
+    max-width: 90%;
+    margin-left: 20px;
+}
+.rating {
+    display: flex;
+    align-items: center;
+    color: #ffa500;
+    margin: 0 15px;
+    display: inline-flex;
+}
+.rating i{
+    margin-right: 5px;
+    margin-left: 100px;
+}
+.price {
+    color: #171100;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+.courses button {
+    height: 50px;
+    width: 100px;
+    background-color: #171100;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-left: 150px;
+}
+button:hover {
+    background-color: #333;
+}
+.testimonial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2e2100;
+    color: white;
+    margin-top: 135px;
+    padding: 96px 0; /*khoảng cách bên trong giữa nội dung của một phần tử và viền*/
+}
+.testimonial-content {
+    max-width: 900px;
+}
+.avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+}
+.name  {
+    margin-top: 18px;
+    color: #f7f7f7;
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 700;
+    max-width: 20%;
+}
+.text  {
+    margin-top: 4px;
+    color: #bfbcb2;
+    font-size: 14px;
+    max-width: 20%;
+}
+.testimonial-content blockquote {
+    display: flex;
+    color: #fff;
+    font-size: 26px;
+    font-style: italic;
+
+}
+
