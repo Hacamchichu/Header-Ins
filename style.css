@@ -345,7 +345,7 @@ button:hover {
 }
 .testimonial-text img {
     position: absolute;
-    left: 400px;
+    
 }
 .outcomes {
     margin-top: 135px;
@@ -353,7 +353,7 @@ button:hover {
 }
 .outcomes .body {
     display: flex;
-   
+   justify-content: space-between;
 }
 .outcomes .images {
     display: flex;
@@ -369,7 +369,10 @@ button:hover {
 }
 .outcomes .outcomes-content {
     width: 41%;
-    padding-left: 10px;
+   /* padding-left: 10px; */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
 }
 .outcomes-content h2 {
     color: #171100;
