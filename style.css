@@ -410,6 +410,7 @@ button:hover {
     width: 470px;
     height: 440px   ;
     border-radius: 16px;
+    object-fit: cover;
 }
 .intro .intro-content {
     width: 49%;
@@ -480,6 +481,7 @@ a {
     width: 100%;
     height: 250px;
     border-radius: 16px 16px 0 0;
+    object-fit: cover;
 }
 .blog .blog-card .blog-info {
     padding: 20px 20px 28px;
