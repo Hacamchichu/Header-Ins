@@ -1,7 +1,9 @@
 body{
-    background-color: #fdfbf3;
     margin: 0;
     font-family: Arial, sans-serif;
+}
+.header {
+    background-color: #fffcf4;
 }
 .navbar{
     display: flex;
@@ -41,28 +43,32 @@ body{
     font-size: 40px;
 }
 .hero{
+    padding: 56px 0 65px; 
+    background: #fffcf4;
+}
+.hero-body {
     display: flex;
-    align-items: center; /*căn giữa theo chiều dọc chỉ hoạt động khi có flex*/
-    justify-content: space-between; 
-    padding: 40px; 
-    background-color: #fdf8ee;
 }
 .img{
     position: relative; /*giữ nguyên có thể chồng thêm */
+    width: 48%;
 }
-.img img{
-    width: 350px;
-    border-radius: 15px;
+.img .imgins{
+    width: 100%;
+    height: auto;
+    max-height: 50rem;
+    object-fit: cover;
+    border-radius: 20px;
 }
 .course-info {
     position: absolute; /*chồng lên ảnh*/
-    bottom: 40px;
-    left: 70%;
+    bottom: 48px;
+    right: -100px;    
     background-color: white;
-    border-radius: 10px;
-    width: 200px;
-    padding: 10px 15px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    width: 270px;
+    padding: 24px;
+    box-shadow: 0px 16px 32px 0 rgba(0,0,0,0.05);
 }
 
 .course-item {
@@ -100,10 +106,9 @@ body{
     background-color: #ddeeff;
 }
 .hero-content{
-    max-width: 500px;
-margin-left: 200px;
-flex-direction: column; /*sắp xếp nội dung theo chiều dọc*/  
-align-items: flex-start; /*căn trái nội dung*/
+    width: 52%;
+    padding-left: 130px;
+    padding-top: 64px;
 }
 .hero-content h1{
     font-size: 36px;
@@ -120,12 +125,15 @@ align-items: flex-start; /*căn trái nội dung*/
 .hero-buttons a{
     text-decoration: none; /*bỏ gạch chân của a*/
     padding: 12px 24px;
-    border-radius: 25px;
+    border-radius: 999px;
     font-size: 16px;
     font-weight: bold;  
     transition: 0.3s ease-in-out;
     display: flex;
     align-items: center;
+}
+.hero-buttons a:hover {
+    background-color: #fdd835;
 }
 .nut1{
     background-color: #ffba08;
@@ -179,7 +187,11 @@ align-items: flex-start; /*căn trái nội dung*/
     margin-left: auto;
     
 }
-
+.courses {
+    padding: 6.5rem 0;
+    margin-top: 13.5rem;
+    background-color: #fff;
+}
 .courses h2 {
     color: #171100;
     font-weight: 700;
@@ -193,21 +205,27 @@ align-items: flex-start; /*căn trái nội dung*/
 }
 .courses-list{
     display: flex;
-    max-width: 100%;
-    gap: 20px;
+    gap: 30px;
+    margin-top: 55px;
 }
 .courses-card {
     width: calc(33.333% - 20px);
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    border: 1px solid #e2dfda;
     background-color: white;
-   
+   transition: all 0.3s ease-in-out;
     
+}
+.courses-card:hover{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0).2;
+    border: none;
+    transform: translateY(-5px);
 }
 .courses-card  img{
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px 12px 0 0;
     height: 278px;
+    object-fit: cover;
 }
 .courses-card h3 {
     color: #171100;
@@ -221,10 +239,11 @@ align-items: flex-start; /*căn trái nội dung*/
 }
 .courses-card p {
     color: #5f5b53;
-    font-size: 1.86;
+    font-size: 14px;
     margin-top:6px ;
     max-width: 90%;
     margin-left: 20px;
+    line-height: 1.86;
 }
 .rating {
     display: flex;
@@ -260,42 +279,73 @@ button:hover {
     background-color: #333;
 }
 .testimonial {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #2e2100;
-    color: white;
+    padding: 96px 0;
     margin-top: 135px;
-    padding: 96px 0; /*khoảng cách bên trong giữa nội dung của một phần tử và viền*/
+    background: #2e2100;
 }
-.testimonial-content {
-    max-width: 900px;
+.testimonial .testimonial-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
 }
-.avatar {
+.testimonial .testimonial-content .avatar {
     width: 72px;
     height: 72px;
     border-radius: 50%;
+    object-fit: cover;
 }
-.name  {
+.testimonial .testimonial-content .testimonial-info {
+    width: 158.83px;
+    height: 190.82px;
+    flex-shrink: 0;
+}
+.testimonial-content .testimonial-info .name {
     margin-top: 18px;
     color: #f7f7f7;
-    font-family: var(--font-heading);
     font-size: 24px;
     font-weight: 700;
-    max-width: 20%;
+    line-height: 1.42;
 }
-.text  {
+.testimonial-content .testimonial-info .text {
     margin-top: 4px;
     color: #bfbcb2;
     font-size: 14px;
-    max-width: 20%;
+    line-height: 1.86;
+    position: relative;
+}
+.testimonial-content .dots {
+    display: flex;
+    margin-top: 28px;
+    gap:6px;
+}
+.testimonial-content .dot-active {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: #fbc02d;
+    cursor: default;
+}
+.testimonial-content .dot {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #634700;
+}
+.testimonial-content .testimonial-text {
+    width: 66%;
+    margin-left: auto;
 }
 .testimonial-content blockquote {
-    display: flex;
     color: #fff;
     font-size: 26px;
     font-style: italic;
-
+    line-height: 1.54;
+}
+.testimonial-text img {
+    position: absolute;
+    left: 400px;
 }
 .outcomes {
     margin-top: 135px;
@@ -503,3 +553,73 @@ a {
     cursor: none;
     background-color:#ffa500 ;
 }
+.blog .blog-card {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.blog .blog-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.footer {
+    background: #2e2100;
+    padding: 96px 135px 0;
+}
+.footer .footer-container {
+    display: flex;
+    padding-bottom: 38px;
+    border-bottom: 1px solid #59554b;
+}
+.footer .footer-container .column-intro {
+    width: 35%;
+}
+.footer .footer-container .column {
+    width: 21.6%;
+}
+.footer .text {
+    margin-top: 18px;
+    max-width: 267px;
+    color: #bfbcb2;
+    font-size: 14px;
+    line-height: 1.86;
+}
+.footer .social-network {
+    display: flex;
+    margin-top: 18px;
+    gap: 18px
+}
+.footer .icon {
+    width: 18px;
+    height: 15px;
+}
+.footer .title {
+    display: inline-block;
+    padding-right: 48px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #59554b;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.75;
+}
+.footer .list {
+    margin-top: 28px;
+    padding-left: 0;
+}
+.footer .list a {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #bfbcb2;
+    font-size: 14px;
+    line-height: 1.86;
+}
+ul { list-style: none;}
+
+.footer .footer-bottom {
+    padding: 28px 0;
+    color: #807b74;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.86;
+}
+
+
